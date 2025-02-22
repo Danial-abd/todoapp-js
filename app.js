@@ -1,17 +1,21 @@
 let tasks = [];
+let totalTask = 0;
+// document.getElementById("numbers").innerHTML = ' 0/' + totalTask;
 
 const tambahTask = () => {
     const taskInput = document.getElementById("taskInput")
     const text = taskInput.value.trim()
-
+    
     if (text) {
         tasks.push({
             text: text,
             completed: false
         });
     }
-
+    
     updateTaskList()
+    totalTask = tasks.length;
+    document.getElementById("numbers").innerHTML =  '0/' + totalTask;
 };
 
 const updateTaskList = ()=> {
