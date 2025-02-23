@@ -15,7 +15,7 @@ const tambahTask = () => {
     
     updateTaskList()
     totalTask = tasks.length;
-    document.getElementById("numbers").innerHTML =  '0/' + totalTask;
+    document.getElementById("numbers").innerHTML =  '0 / ' + totalTask;
 };
 
 const updateTaskList = ()=> {
