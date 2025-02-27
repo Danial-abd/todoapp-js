@@ -17,7 +17,7 @@
     --secondarybackground: #171c48;
     --text: #fff;
     --purple: #828dff;
-    --teal: #24f333;
+    --teal: #24feee;
 }
 
 body{
@@ -107,14 +107,24 @@ button{
 }
 
 #task-list{
+    display: flex;
     list-style: none;
+    flex-direction: column;
     width: 100%;
-    padding-top: 20px;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px;
 }
 
 .task{
     display: flex;
     gap: 10px;
+    align-items: center;
+} 
+
+.task input{
+    width: 20px;
+    height: 20px;
 }
 
 .taskItem{
@@ -122,15 +132,21 @@ button{
     padding: 10px;
     justify-content: space-between;
     border-radius: 10px;
-    margin-top: 10px;
     display: flex;
     border: 1px solid var(--purple);
     background: var(--secondarybackground);
 }
 
-.icons img{
-    width: 20px;
-    height: 20px;
+.taskItem img{
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.completed p{
+    text-decoration: line-through;
+    color: var(--teal);
 }
 
 
