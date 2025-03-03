@@ -58,7 +58,7 @@ const editTask = (index) => {
 const updateStats = () => {
   const completedTask = tasks.filter((task) => task.completed).length;
   const totalTasks = tasks.length;
-  const progress = (completedTask / totalTasks) * 100;
+  const progress = totalTasks == 0 ? 0 * 100 : (completedTask / totalTasks) * 100; 
   const progresBar = document.getElementById("progress");
 
   progresBar.style.width = `${progress}%`;
